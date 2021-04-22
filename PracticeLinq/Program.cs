@@ -8,11 +8,11 @@ namespace PracticeLinq
     {
         static void Main(string[] args)
         {
-            List<string> favoriteShows = new List<string>
+            var favoriteShows = new List<string>
             {"Bobs Burgers", "Handmaids Tale", "The Office", "Curb Your Enthusiasm", "Real Housewives"};
 
 
-            IEnumerable<string> sortedShows = favoriteShows.OrderBy(x => x.Length);
+            var sortedShows = favoriteShows.OrderBy(x => x.Length);
 
             foreach (var show in sortedShows)
             {
@@ -20,7 +20,7 @@ namespace PracticeLinq
             }
 
 
-            //another way i found to order by
+            //query syntax
             /*
             var sortedShows = from show in favoriteShows
                               orderby show.Length
